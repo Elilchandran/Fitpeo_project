@@ -1,0 +1,149 @@
+#layoutSidenav {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Ensure no scroll bars appear */
+}
+
+#layoutSidenav_nav {
+  width: 225px; /* Fixed width for sidebar */
+  background-color: #f8f9fa; /* Background color for sidebar */
+  transition: transform 0.15s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Ensure it extends vertically */
+  height: 100%; /* Full height */
+}
+
+#layoutSidenav_content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow: auto; /* Enable scrolling if content overflows */
+}
+
+.sb-sidenav .sb-sidenav-menu {
+  flex: 1; /* Makes sure the menu takes up remaining space */
+}
+
+/* Toggled state */
+.sb-sidenav-toggled #layoutSidenav_nav {
+  transform: translateX(-225px); /* Hide sidebar when toggled */
+}
+
+.sb-sidenav-toggled #layoutSidenav_content {
+  margin-left: 0; /* Adjust content margin when sidebar is toggled */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  #layoutSidenav_nav {
+    width: 200px; /* Adjust for smaller screens */
+  }
+
+  #layoutSidenav_content {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+
+  .sb-sidenav-toggled #layoutSidenav_nav {
+    transform: translateX(-200px); /* Adjust for smaller screens */
+  }
+}
+
+/* Sidebar styles */
+.sb-sidenav {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px);
+  width: 100px; /* Adjust width as needed */
+  flex-wrap: nowrap;
+}
+
+#layoutSidenav_nav.collapsed {
+  display: none;
+}
+
+.sb-sidenav .sb-sidenav-menu {
+  flex-grow: 1;
+  margin-bottom: auto;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+  padding: 1.75rem 1rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem; /* Adjust padding to your preference */
+  position: relative;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
+  font-size: 0.9rem;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-sidenav-collapse-arrow {
+  display: inline-block;
+  margin-left: auto;
+  transition: transform 0.15s ease;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link.collapsed .sb-sidenav-collapse-arrow {
+  transform: rotate(-90deg);
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-nested {
+  margin-left: 1.5rem;
+  flex-direction: column;
+}
+
+.sb-sidenav .sb-sidenav-footer {
+  padding: 0.75rem;
+  flex-shrink: 0;
+}
+
+.sb-sidenav-dark {
+  background-color: #101113;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+  color: #516af5; /* Change hover color */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
+  color: #516af5; /* Change active link color */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
+  color: #516af5; /* Change icon color of active link */
+}
+
+.sb-sidenav-dark .sb-sidenav-footer {
+  background-color: #343a40;
+}
+

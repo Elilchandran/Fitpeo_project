@@ -1,0 +1,1029 @@
+/* Sidebar styles */
+#layoutSidenav {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+
+#layoutSidenav_nav {
+  width: 225px; /* Fixed width for sidebar */
+  height: 100%;
+  background-color: #f8f9fa; /* Background color for sidebar */
+  transition: transform 0.15s ease-in-out;
+}
+
+/* Content styles */
+#layoutSidenav_content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 225px; /* Align with sidebar width */
+  transition: margin 0.15s ease-in-out;
+}
+
+
+/* Toggled state */
+.sb-sidenav-toggled #layoutSidenav_nav {
+  transform: translateX(-225px); /* Hide sidebar when toggled */
+}
+
+.sb-sidenav-toggled #layoutSidenav_content {
+  margin-left: 0; /* Adjust content margin when sidebar is toggled */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  #layoutSidenav_nav {
+    width: 200px; /* Adjust for smaller screens */
+  }
+
+  #layoutSidenav_content {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+
+  .sb-sidenav-toggled #layoutSidenav_nav {
+    transform: translateX(-200px); /* Adjust for smaller screens */
+  }
+}
+
+/* Sidebar styles */
+.sb-sidenav {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px);
+  width: 100px; /* Adjust width as needed */
+  flex-wrap: nowrap;
+}
+
+#layoutSidenav_nav.collapsed {
+  display: none;
+}
+
+.sb-sidenav .sb-sidenav-menu {
+  flex-grow: 1;
+  margin-bottom: auto;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+  padding: 1.75rem 1rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem; /* Adjust padding to your preference */
+  position: relative;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
+  font-size: 0.9rem;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-sidenav-collapse-arrow {
+  display: inline-block;
+  margin-left: auto;
+  transition: transform 0.15s ease;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link.collapsed .sb-sidenav-collapse-arrow {
+  transform: rotate(-90deg);
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-nested {
+  margin-left: 1.5rem;
+  flex-direction: column;
+}
+
+.sb-sidenav .sb-sidenav-footer {
+  padding: 0.75rem;
+  flex-shrink: 0;
+}
+
+.sb-sidenav-dark {
+  background-color: #212529;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+  color: #516af5; /* Change hover color */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
+  color: #516af5; /* Change active link color */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
+  color: #516af5; /* Change icon color of active link */
+}
+
+.sb-sidenav-dark .sb-sidenav-footer {
+  background-color: #343a40;
+}
+
+
+
+
+Home.css
+/* Ensure the parent container is full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Sidebar styles */
+#layoutSidenav {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+#layoutSidenav_nav {
+  width: 225px; /* Fixed width for sidebar */
+  height: 100%; /* Full height */
+  background-color: #f8f9fa; /* Background color for sidebar */
+  transition: transform 0.15s ease-in-out;
+}
+
+/* Content styles */
+#layoutSidenav_content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 225px; /* Align with sidebar width */
+  transition: margin 0.15s ease-in-out;
+}
+
+/* Toggled state */
+.sb-sidenav-toggled #layoutSidenav_nav {
+  transform: translateX(-225px); /* Hide sidebar when toggled */
+}
+
+.sb-sidenav-toggled #layoutSidenav_content {
+  margin-left: 0; /* Adjust content margin when sidebar is toggled */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  #layoutSidenav_nav {
+    width: 200px; /* Adjust for smaller screens */
+  }
+
+  #layoutSidenav_content {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+
+  .sb-sidenav-toggled #layoutSidenav_nav {
+    transform: translateX(-200px); /* Adjust for smaller screens */
+  }
+}
+
+/* Additional styles for sidebar */
+.sb-sidenav {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height of parent */
+  width: 100px; /* Adjust width as needed */
+  flex-wrap: nowrap;
+}
+
+#layoutSidenav_nav.collapsed {
+  display: none;
+}
+
+.sb-sidenav .sb-sidenav-menu {
+  flex-grow: 1;
+  margin-bottom: auto;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+  padding: 1.75rem 1rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem; /* Adjust padding to your preference */
+  position: relative;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
+  font-size: 0.9rem;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-sidenav-collapse-arrow {
+  display: inline-block;
+  margin-left: auto;
+  transition: transform 0.15s ease;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link.collapsed .sb-sidenav-collapse-arrow {
+  transform: rotate(-90deg);
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-nested {
+  margin-left: 1.5rem;
+  flex-direction: column;
+}
+
+.sb-sidenav .sb-sidenav-footer {
+  padding: 0.75rem;
+  flex-shrink: 0;
+}
+
+.sb-sidenav-dark {
+  background-color: #212529;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+  color: #516af5; /* Change hover color */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
+  color: #516af5; /* Change active link color */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
+  color: #516af5; /* Change icon color of active link */
+}
+
+.sb-sidenav-dark .sb-sidenav-footer {
+  background-color: #343a40;
+}
+
+
+
+import React, { useState } from 'react';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Dashboard from './components/Dashboard';
+import Home from './components/Home';
+import ChartLine from './components/ChartLine';
+import ClipboardList from './components/ClipboardList';
+import Wallet from './components/Wallet';
+import ShoppingBag from './components/ShoppingBag';
+import SignIn from './components/SignIn';
+
+const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  return (
+    <Router>
+      <div className="App">
+      
+        <Navbar toggleSidebar={toggleSidebar} />
+        <div id="layoutSidenav">
+          <div id="layoutSidenav_nav" className={sidebarOpen ? '' : 'collapsed'}>
+            <Sidebar />
+          </div>
+          <div id="layoutSidenav_content">
+            <main>
+              <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/chart-line" element={<ChartLine />} />
+                <Route path="/clipboard-list" element={<ClipboardList />} />
+                <Route path="/wallet" element={<Wallet />} />
+                <Route path="/shopping-bag" element={<ShoppingBag />} />
+                <Route path="/sign-in" element={<SignIn />} />
+                <Route path="/" element={<Dashboard />} /> {/* Default route */}
+              </Routes>
+            </main>
+          </div>
+        </div>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+
+import React,{useState}from 'react';
+import './Home.css'; // Create this CSS file for custom styles if needed
+import ProgressChart from './ProgressChart';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+
+// Register Chart.js components
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
+const Home = () => {
+  const [timePeriod, setTimePeriod] = useState('Weekly');
+
+  const getChartData = () => {
+    // Example data for demonstration; you should replace this with actual data
+    const data = {
+      Weekly: [5, 10, 15, 20, 25],
+      Monthly: [50, 100, 150, 200, 250],
+      Yearly: [500, 1000, 1500, 2000, 2500],
+    };
+
+    return {
+      labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+      datasets: [
+        {
+          label: `Sales (${timePeriod})`,
+          data: data[timePeriod],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1,
+        },
+      ],
+    };
+  };
+
+  const handleTimePeriodChange = (period) => {
+    setTimePeriod(period);
+  };
+
+  return (
+    <div className="container-fluid px-4">
+      <h1 className="mt-2 mb-2">Dashboard</h1>
+
+      {/* First Row */}
+      <div className="row mb-4">
+        
+        <div className="col-md-9 ">
+          <div className="row">
+            <div className="col-md-3 mb-3">
+              <div className="card bg-dark text-white h-100">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center">
+                  <i className="fas fa-shopping-cart fa-1x mb-3" style={{ color: '#54aeeb' }}></i>
+                  <h6 className="card-title">Total Orders</h6>
+                </div>
+                <div className="card-footer d-flex align-items-center justify-content-between">
+                  <button type="button" className="btn btn-outline-info">75</button>
+                  <div className="small text-dark"><i className="fas fa-sort-amount-up-alt  mb-2" style={{ color: '#41912d' }}></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-3 mb-3">
+              <div className="card bg-dark text-white h-100">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center">
+                  <i className="fas fa-truck fa-1x mb-3" style={{ color: '#87d859' }}></i>
+                  <h6 className="card-title">Total Deliveries</h6>
+                </div>
+                <div className="card-footer d-flex align-items-center justify-content-between">
+                  <button type="button" className="btn btn-outline-info">70</button>
+                  <div className="small text-dark"><i className="fas fa-sort-amount-down-alt mb-2" style={{ color: '#c0463e' }}></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-3 mb-3">
+              <div className="card bg-dark text-white h-100">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center">
+                  <i className="fas fa-window-close fa-1x mb-3" style={{ color: '#e44048' }}></i>
+                  <h6 className="card-title">Total Cancelled</h6>
+                </div>
+                <div className="card-footer d-flex align-items-center justify-content-between">
+                  <button type="button" className="btn btn-outline-info">05</button>
+                  <div className="small text-dark"><i className="fas fa-sort-amount-up-alt  mb-2" style={{ color: '#41912d' }}></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-3 mb-3">
+              <div className="card bg-dark text-white h-100">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center">
+                  <i className="fas fa-hand-holding-usd fa-1x mb-3" style={{ color: '#d05dc6' }}></i>
+                  <h6 className="card-title">Total Revenue</h6>
+                </div>
+                <div className="card-footer d-flex align-items-center justify-content-between">
+                  <button type="button" className="btn btn-outline-info">$12k</button>
+                  <div className="small text-dark"><i className="fas fa-sort-amount-down-alt  mb-2" style={{ color: '#c0463e' }}></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="col-md-3 mb-0">
+        <div className="card bg-dark text-white h-100 position-relative">
+          <div className="card-body d-flex flex-column">
+            <div className="d-flex justify-content-between align-items-start">
+              <div className="mb-3">Net Profits</div>
+              <div className="progress-chart-container">
+                <ProgressChart />
+                <h6 className="card-title small">value have been reached</h6>
+              </div>
+              
+            </div>
+            <h5>$ 6759.25</h5>
+            <div className="d-flex flex-column justify-content-end mt-auto">
+              <div className="small text-dark">
+                <i className="fas fa-sort-amount-up-alt mb-2" style={{ color: '#41912d' }}></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+
+       {/* Second Row */}
+       <div className="row mb-4">
+        <div className="col-md-9 mb-4">
+          <div className="card h-100">
+            <div className="card-header d-flex justify-content-between align-items-center">
+              <div>
+                <i className="fas fa-chart-bar me-1"></i>
+                Bar Chart Example
+              </div>
+              <div className="dropdown">
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {timePeriod}
+                </button>
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => handleTimePeriodChange('Weekly')}
+                    >
+                      Weekly
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => handleTimePeriodChange('Monthly')}
+                    >
+                      Monthly
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => handleTimePeriodChange('Yearly')}
+                    >
+                      Yearly
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="card-body">
+              <Bar
+                data={getChartData()}
+                options={{
+                  responsive: true,
+                  plugins: {
+                    legend: {
+                      position: 'top',
+                    },
+                    tooltip: {
+                      callbacks: {
+                        label: (tooltipItem) => {
+                          return `${tooltipItem.dataset.label}: ${tooltipItem.raw}`;
+                        },
+                      },
+                    },
+                  },
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-3 mb-4">
+          <div className="card h-100">
+            <div className="card-header">
+              <i className="fas fa-chart-area me-1"></i>
+              Activity
+            </div>
+            <div className="card-body">
+              <canvas id="myAreaChart" width="100%" height="100"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {/* Third Row */}
+      <div className="row mb-4">
+        <div className="col-md-9 mb-4">
+          <div className="card h-100">
+            <div className="card-header">
+              <i className="fas fa-calendar-alt me-1"></i>
+              Calendar Example
+            </div>
+            <div className="card-body">
+              {/* Add your Calendar component or HTML here */}
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 mb-4">
+          <div className="card h-100">
+            <div className="card-header">
+              <i className="fas fa-table me-1"></i>
+              DataTable Example
+            </div>
+            <div className="card-body">
+              {/* Add your DataTable component or HTML here */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
+import React, { useState } from 'react';
+import './Home.css'; // Ensure this CSS file is styled as needed
+import ProgressChart from './ProgressChart';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+
+// Register Chart.js components
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
+const Home = () => {
+  const [timePeriod, setTimePeriod] = useState('Weekly');
+
+  const getChartData = () => {
+    // Example data for demonstration; you should replace this with actual data
+    const data = {
+      Weekly: [5, 10, 15, 20, 25],
+      Monthly: [50, 100, 150, 200, 250],
+      Yearly: [500, 1000, 1500, 2000, 2500],
+    };
+
+    return {
+      labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+      datasets: [
+        {
+          label: `Sales (${timePeriod})`,
+          data: data[timePeriod],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(209, 107, 235, 1)',
+          borderWidth: 1,
+        },
+      ],
+    };
+  };
+
+  const handleTimePeriodChange = (period) => {
+    setTimePeriod(period);
+  };
+
+  const orders = [
+    { customer: 'Wade Warren', orderNo: '15478256', amount: '$124.00', status: 'Delivered' },
+    { customer: 'Bella', orderNo: '15478256', amount: '$345.00', status: 'Delivered' },
+    { customer: 'Zara', orderNo: '15478256', amount: '$120.00', status: 'Cancelled' },
+    { customer: 'Hawkins', orderNo: '15478256', amount: '$452.00', status: 'Pending' },
+    { customer: 'Cooper', orderNo: '15478256', amount: '$501.00', status: 'Delivered' },
+    { customer: 'Watson', orderNo: '15478256', amount: '$465.00', status: 'Delivered' },
+  ];
+
+  const getStatusClass = (status) => {
+    switch (status) {
+      case 'Delivered':
+        return 'status-delivered';
+      case 'Pending':
+        return 'status-pending';
+      case 'Cancelled':
+        return 'status-cancelled';
+      default:
+        return '';
+    }
+  };
+
+  return (
+    <div className="container-fluid px-4">
+      <h1 className="mt-2 mb-2">Dashboard</h1>
+
+      {/* First Row */}
+      <div className="row mb-4">
+        <div className="col-md-9">
+          <div className="row ">
+            <div className="col-md-3 mb-3">
+              <div className="card bg-dark text-white h-100">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center">
+                  <i className="fas fa-shopping-cart fa-1x mb-3" style={{ color: '#54aeeb' }}></i>
+                  <h6 className="card-title">Total Orders</h6>
+                </div>
+                <div className="card-footer d-flex align-items-center justify-content-between">
+                  <button type="button" className="btn btn-outline-info">75</button>
+                  <div className="small text-dark"><i className="fas fa-sort-amount-up-alt mb-2" style={{ color: '#41912d' }}></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-3 mb-3">
+              <div className="card bg-dark text-white h-100">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center">
+                  <i className="fas fa-truck fa-1x mb-3" style={{ color: '#87d859' }}></i>
+                  <h6 className="card-title">Total Deliveries</h6>
+                </div>
+                <div className="card-footer d-flex align-items-center justify-content-between">
+                  <button type="button" className="btn btn-outline-info">70</button>
+                  <div className="small text-dark"><i className="fas fa-sort-amount-down-alt mb-2" style={{ color: '#c0463e' }}></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-3 mb-3">
+              <div className="card bg-dark text-white h-100">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center">
+                  <i className="fas fa-window-close fa-1x mb-3" style={{ color: '#e44048' }}></i>
+                  <h6 className="card-title">Total Cancelled</h6>
+                </div>
+                <div className="card-footer d-flex align-items-center justify-content-between">
+                  <button type="button" className="btn btn-outline-info">05</button>
+                  <div className="small text-dark"><i className="fas fa-sort-amount-up-alt mb-2" style={{ color: '#41912d' }}></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-3 mb-3">
+              <div className="card bg-dark text-white h-100">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center">
+                  <i className="fas fa-hand-holding-usd fa-1x mb-3" style={{ color: '#d05dc6' }}></i>
+                  <h6 className="card-title">Total Revenue</h6>
+                </div>
+                <div className="card-footer d-flex align-items-center justify-content-between">
+                  <button type="button" className="btn btn-outline-info">$12k</button>
+                  <div className="small text-dark"><i className="fas fa-sort-amount-down-alt mb-2" style={{ color: '#c0463e' }}></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-3 mb-3">
+          <div className="card bg-dark text-white h-100 position-relative">
+            <div className="card-body d-flex flex-column">
+              <div className="d-flex justify-content-between align-items-start">
+                <div className="mb-3">Net Profits</div>
+                <div className="progress-chart-container">
+                  <ProgressChart />
+                  <h6 className="card-title small">Value has been reached</h6>
+                </div>
+              </div>
+              <h5>$ 6759.25</h5>
+              <div className="d-flex flex-column justify-content-end mt-auto">
+                <div className="small text-dark">
+                  <i className="fas fa-sort-amount-up-alt mb-2" style={{ color: '#41912d' }}></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      {/* Second Row */}
+      <div className="row mb-4">
+        <div className="col-md-9 mb-4">
+          <div className="card h-80">
+            <div className="card-header d-flex justify-content-between align-items-center">
+              <div>
+              <i className="fas fa-chart-area me-1 "></i>
+                Activity
+              </div>
+              <div className="dropdown">
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {timePeriod}
+                </button>
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => handleTimePeriodChange('Weekly')}
+                    >
+                      Weekly
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => handleTimePeriodChange('Monthly')}
+                    >
+                      Monthly
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => handleTimePeriodChange('Yearly')}
+                    >
+                      Yearly
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="card-body">
+            <div style={{ position: 'relative', height: '200px' }}>
+              <Bar
+                data={getChartData()}
+                options={{
+                  responsive: true,
+                  maintainAspectRatio: false, // Allows for independent height and width
+                  plugins: {
+                    legend: {
+                      position: 'top',
+                    },
+                    tooltip: {
+                      callbacks: {
+                        label: (tooltipItem) => {
+                          return `${tooltipItem.dataset.label}: ${tooltipItem.raw}`;
+                        },
+                      },
+                    },
+                  },
+                }}
+              />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-3 mb-0">
+            <div className="card-body ">
+            <div class="card bg-dark text-white mb-4">
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <p class="small text-white stretched-link" href="#"><i className="fas fa-bullseye fa-3x " style={{ color: '#9a474f' }} ></i></p>
+                    <h6>Goal</h6>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+              </div>
+              <div class="card bg-dark text-white mb-4">
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <p class="small text-white stretched-link" href="#"><i className="fas fa-hamburger fa-3x " style={{ color: '#6181b8' }}></i></p>
+                    <h6>Popular Dishes</h6>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+              </div>
+              <div class="card bg-dark text-white mb-4">
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <p class="small text-white stretched-link" href="#"><i className="fas fa-utensils fa-3x " style={{ color: '#63E6BE' }}></i></p>
+                    <h6>Menus</h6>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+
+      {/* Third Row */}
+      <div className="row">
+        <div className="col-lg-9 mb-4">
+          <div className="card bg-dark text-white">
+            <div className="card-header">
+              Recent Orders
+            </div>
+            <div className="card-body">
+              <table className="table table-dark table-hover">
+                <thead>
+                  <tr>
+                    <th>Customer</th>
+                    <th>Order No.</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {orders.map((order, index) => (
+                    <tr key={index}>
+                      <td>{order.customer}</td>
+                      <td>{order.orderNo}</td>
+                      <td>{order.amount}</td>
+                      <td className={getStatusClass(order.status)}>{order.status}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      
+
+        <div className="col-lg-3 mb-4">
+          <div className="card bg-dark text-white">
+            <div className="card-header">
+              <i className="fas fa-comments me-1"></i>
+              Customer Feedback
+            </div>
+            <div className="card-body">
+              {/* Table for Customer Feedback */}
+              <table className="table table-dark table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Customer</th>
+                    <th>Feedback</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Great service!</td>
+                    <td>01/01/2024</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>Quick delivery!</td>
+                    <td>02/01/2024</td>
+                  </tr>
+                  {/* Add more rows as needed */}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
+
+
+import React, { useState } from 'react';
+import './Home.css'; // Ensure this CSS file is styled as needed
+import ProgressChart from './ProgressChart';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import StarRatings from 'react-star-ratings'; // Import the star rating component
+
+// Register Chart.js components
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
+const Home = () => {
+  const [timePeriod, setTimePeriod] = useState('Weekly');
+
+  const getChartData = () => {
+    // Example data for demonstration; you should replace this with actual data
+    const data = {
+      Weekly: [5, 10, 15, 20, 25],
+      Monthly: [50, 100, 150, 200, 250],
+      Yearly: [500, 1000, 1500, 2000, 2500],
+    };
+
+    return {
+      labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+      datasets: [
+        {
+          label: `Sales (${timePeriod})`,
+          data: data[timePeriod],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(209, 107, 235, 1)',
+          borderWidth: 1,
+        },
+      ],
+    };
+  };
+
+  const handleTimePeriodChange = (period) => {
+    setTimePeriod(period);
+  };
+
+  const ratings = [
+    { name: 'John Doe', rating: 4, date: '01/01/2024', review: 'Great service and fast delivery!' },
+    { name: 'Jane Smith', rating: 5, date: '02/01/2024', review: 'Excellent quality, highly recommend!' },
+    // Add more feedback objects as needed
+  ];
+
+  return (
+    <div className="container-fluid px-4">
+      <h1 className="mt-2 mb-2">Dashboard</h1>
+
+      {/* First Row */}
+      <div className="row mb-4">
+        {/* ... (other cards) */}
+      </div>
+
+      {/* Second Row */}
+      <div className="row mb-4">
+        {/* ... (other cards) */}
+      </div>
+
+      {/* Third Row */}
+      <div className="row">
+        {/* Feedback Section */}
+        <div className="col-lg-3 mb-4">
+          <div className="card bg-dark text-white">
+            <div className="card-header">
+              <i className="fas fa-comments me-1"></i>
+              Customer Feedback
+            </div>
+            <div className="card-body">
+              {ratings.map((feedback, index) => (
+                <div key={index} className="mb-3">
+                  <div className="d-flex align-items-center">
+                    <div className="me-2">
+                      <span className="fw-bold">{feedback.name}</span>
+                    </div>
+                    <div className="me-2">
+                      <StarRatings
+                        rating={feedback.rating}
+                        starRatedColor="gold"
+                        starDimension="20px"
+                        starSpacing="5px"
+                        numberOfStars={5}
+                        name='rating'
+                      />
+                    </div>
+                    <div className="ms-auto">
+                      <span>{feedback.date}</span>
+                    </div>
+                  </div>
+                  <div className="mt-2">
+                    <p>{feedback.review}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+

@@ -1,0 +1,297 @@
+Home.css
+/* Ensure the parent container is full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  
+  background-color: #000000;
+  color: #fff;
+}
+
+/* Sidebar styles */
+#layoutSidenav {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+#layoutSidenav_nav {
+  width: 225px; /* Fixed width for sidebar */
+  height: 100%; /* Full height */
+  background-color: #f8f9fa; /* Background color for sidebar */
+  transition: transform 0.15s ease-in-out;
+}
+
+/* Content styles */
+#layoutSidenav_content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 225px; /* Align with sidebar width */
+  transition: margin 0.15s ease-in-out;
+}
+
+/* Toggled state */
+.sb-sidenav-toggled #layoutSidenav_nav {
+  transform: translateX(-225px); /* Hide sidebar when toggled */
+}
+
+.sb-sidenav-toggled #layoutSidenav_content {
+  margin-left: 0; /* Adjust content margin when sidebar is toggled */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #layoutSidenav_nav {
+    width: 200px; /* Adjust for smaller screens */
+  }
+
+  #layoutSidenav_content {
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+
+  .sb-sidenav-toggled #layoutSidenav_nav {
+    transform: translateX(-200px); /* Adjust for smaller screens */
+  }
+}
+
+/* Additional styles for sidebar */
+.sb-sidenav {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height of parent */
+  width: 60px; /* Adjust width as needed */
+  flex-wrap: nowrap;
+}
+
+#layoutSidenav_nav.collapsed {
+  display: none;
+}
+
+.sb-sidenav .sb-sidenav-menu {
+  flex-grow: 1;
+  margin-bottom: auto;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+  padding: 1.75rem 1rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem; /* Adjust padding to your preference */
+  position: relative;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
+  font-size: 0.9rem;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-sidenav-collapse-arrow {
+  display: inline-block;
+  margin-left: auto;
+  transition: transform 0.15s ease;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link.collapsed .sb-sidenav-collapse-arrow {
+  transform: rotate(-90deg);
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-nested {
+  margin-left: 1.5rem;
+  flex-direction: column;
+}
+
+.sb-sidenav .sb-sidenav-footer {
+  padding: 0.75rem;
+  flex-shrink: 0;
+}
+
+.sb-sidenav-dark {
+  background-color: #212529;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+  color: #516af5; /* Change hover color */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
+  color: #516af5; /* Change active link color */
+}
+
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
+  color: #516af5; /* Change icon color of active link */
+}
+
+.sb-sidenav-dark .sb-sidenav-footer {
+  background-color: #343a40;
+}
+
+
+.card {
+  position: relative;
+}
+
+.icon-top-right {
+  position: absolute;
+  top: 10px; /* Adjust this value as needed */
+  right: 10px; /* Adjust this value as needed */
+}
+
+
+.circular-chart {
+  display: block;
+  margin: auto;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #60656b;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  stroke: #c0463e;
+  transition: stroke-dasharray 1s;
+}
+
+.card {
+  position: relative; /* Ensure card is positioned */
+}
+
+.progress-chart-container {
+  position: absolute;
+  top: 0; /* Align to the top */
+  left: 100px; /* Align to the right */
+  padding: 10px; /* Add padding if needed */
+  border-radius: 5px; /* Optional rounded corners */
+}
+
+
+.card-body {
+  position: relative; /* Ensure the container for the ProgressChart is positioned relative to the card-body */
+}
+
+
+/*Barchart.js*/
+.card-body {
+  position: relative; /* Ensure positioning context for absolute elements */
+}
+
+.chart-container {
+  position: relative;
+}
+
+.monitor-chart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+
+.bordered-card {
+  border: 1px solid #535151; /* White border color */
+  border-radius: 8px; /* Rounded corners for the border */
+}
+
+/* CSS styles for highlighting order status */
+/* CSS styles for highlighting order status */
+.status-delivered {
+  color: #616838 !important; /* Dark green text */
+  font-size: larger !important;
+  padding: 5px !important;
+  border-radius: 4px !important;
+  text-shadow: 0 0 10px rgba(162, 247, 162, 0.5); /* Green glow effect */
+}
+
+.status-pending {
+  color: #856404 !important; /* Dark yellow text */
+  font-size: larger !important;
+  padding: 5px !important;
+  border-radius: 4px !important;
+  text-shadow: 0 0 10px rgba(58, 235, 14, 0.5); /* Yellow glow effect */
+}
+
+.status-cancelled {
+  color: #721c24 !important; /* Dark red text */
+  font-size: larger !important;
+  padding: 5px !important;
+  border-radius: 4px !important;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Red glow effect */
+}
+
+/* Optional: Glow effect on hover */
+.bordered-card:hover {
+  box-shadow: 0 0 200px rgba(192, 178, 178, 0.8) !important; /* Enhanced glowing effect on hover */
+}
+
+
+.review-separator {
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Ensure the feedback section is scrollable */
+.feedback-section {
+  max-height: 400px; /* Adjust based on your design */
+  overflow-y: auto;
+}
+
+/* Style for the review separator */
+.review-separator {
+  border-top: 1px solid #444; /* Adjust color and style as needed */
+  margin: 10px 0;
+}
+
+/* Ensure the review separator is focusable for keyboard navigation */
+.review-separator:focus {
+  outline: none;
+  border-top: 1px solid #fff; /* Highlight color on focus */
+}
+
+.feedback-section {
+  font-size: 0.875rem; /* Adjust the font size to be smaller */
+  font-style: italic; /* Make text italic */
+  padding: 1rem; /* Optional: Adjust padding as needed */
+  color: #ffffff; /* Ensure text color is white or any desired color */
+}
+

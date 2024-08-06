@@ -1,0 +1,61 @@
+.sb-topnav {
+  padding-left: 0;
+  height: 56px;
+  z-index: 1039;
+  background-color: #343a40; /* Dark background for the navbar */
+}
+
+.sb-topnav .navbar-brand {
+  width: 30px;
+  margin: 0;
+}
+
+.sb-topnav.navbar-dark #sidebarToggle {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sb-topnav.navbar-light #sidebarToggle {
+  color: #212529;
+}
+
+/* Ensure proper size and alignment for the sidebar toggle button */
+#sidebarToggle {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: white; /* Ensure contrast with the background */
+  background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* Optional: Add hover effects */
+#sidebarToggle:hover {
+  color: #f0f0f0; /* Change color on hover (optional) */
+}
+
+/* Navbar Search Styles */
+.sb-topnav .form-control {
+  background-color: #495057; /* Dark background for input */
+  color: #ffffff; /* White text color for input */
+  border: 1px solid #6c757d; /* Light border color for input */
+}
+
+.sb-topnav .btn-primary {
+  background-color: #d15252; /* Primary button color */
+  border-color: #d15252; /* Border color to match button */
+}
+
+.sb-topnav .btn-primary .fas {
+  color: #ffffff; /* White icon color */
+}
+
+/* Input and button focus states */
+.sb-topnav .form-control:focus {
+  background-color: #6c757d; /* Slightly lighter dark background on focus */
+  color: #ffffff; /* Maintain white text color */
+  border-color: #007bff; /* Border color on focus */
+}
+
+.sb-topnav .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); /* Focus shadow */
+}
